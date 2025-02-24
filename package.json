@@ -10,6 +10,9 @@
     "prepare": "husky",
     "cypress:open": "cypress open"
   },
+  "bin": {
+    "create-lamah-starter": "./cli/index.js"
+  },
   "config": {
     "commitizen": {
       "path": "@commitlint/cz-commitlint"
@@ -21,10 +24,15 @@
     "@next/bundle-analyzer": "^15.1.7",
     "@reduxjs/toolkit": "^2.5.1",
     "axios": "^1.7.9",
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "fs-extra": "^11.3.0",
+    "inquirer": "^12.4.2",
     "lucide-react": "^0.475.0",
     "mantine-form-zod-resolver": "^1.1.0",
     "next": "15.1.7",
     "next-intl": "^3.26.3",
+    "ora": "^8.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-redux": "^9.2.0",

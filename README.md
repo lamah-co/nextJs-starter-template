@@ -4,9 +4,21 @@ This **Next.js 15** starter template is designed for modern web development with
 
 ---
 
+## Table of Contents
+
+1. [Technologies & Tools Used](#-technologies--tools-used)
+2. [Setting Up Git](#-setting-up-git)
+3. [Customization](#-customization)
+   - [Updating the Favicon](#-updating-the-favicon)
+   - [Using Lucide Icons](#-using-lucide-icons)
+   - [Styling & Theming](#-styling-&-theming)
+4. [Installation & Setup](#-installation-&-setup)
+
+---
+
 ## 🛠 Technologies & Tools Used
 
-### **Frontend Framework**
+### **FrontendV Framework**
 
 - **[Next.js 15](https://nextjs.org/docs)** – React-based framework for SSR, ISR, and static generation.
 
@@ -67,11 +79,82 @@ This **Next.js 15** starter template is designed for modern web development with
 
 ---
 
+## 🌍 Setting Up Git
+
+Ensure your project is on GitHub by creating a repository and pushing your code using the following commands:
+
+```sh
+git remote add origin <your-repo-url>
+git branch -M main
+git add .
+git commit -m "initial commit"
+git push -u origin main
+```
+
+---
+
+## 🎨 Customization
+
+### 🔹 Updating the Favicon
+
+The default favicon is located in `src/app/favicon.ico`. To personalize your project, replace this file with your own favicon. Ensure the new favicon follows the `.ico` format for optimal browser compatibility.
+
+### 🔹 Using Lucide Icons
+
+This project uses [Lucide React](https://lucide.dev/) for icons, a lightweight and customizable icon library. You can easily use any Lucide icon by importing it into your components.
+
+#### Example:
+
+```jsx
+import { Home, Settings } from "lucide-react";
+
+export default function Navbar() {
+  return (
+    <nav>
+      <Home size={24} />
+      <Settings size={24} />
+    </nav>
+  );
+}
+```
+
+Refer to the [Lucide React documentation](https://lucide.dev/docs/lucide-react) for more customization options.
+
+### 🔹 Styling & Theming
+
+The project includes [Mantine](https://mantine.dev/), a modern UI library that supports dark mode, theming, and customizable components. You can modify the theme in `src/theme.ts` to fit your branding.
+
+#### Example (Updating the Theme):
+
+```
+import { createTheme } from "@mantine/core";
+
+export const theme = createTheme({
+  primaryColor: "blue", // Change the primary color
+  fontFamily: "Inter, sans-serif", // Customize fonts
+});
+```
+
+For more advanced styling options, check out [Mantine’s documentation](https://mantine.dev/theming/theme-object/).
+
+---
+
 ## 📦 **Installation & Setup**
 
-1. **Clone the Repository**
+1. **Run the CLI tool and enter a project name:**
 
    ```sh
-   npx github:lamah-co/nextJs-starter-template#cli-tool
+   npx github:lamah-co/nextJs-starter-template
+   ```
 
+2. **Navigate into the project folder:**
+
+   ```sh
+   cd <project-name>
+   ```
+
+3. **Start the development server:**
+
+   ```sh
+   npm run dev
    ```
